@@ -18,7 +18,6 @@ html {
   font-weight: 400;
   font-style: normal;
   background-color: #1b1919;
-  padding: 133px 30px;
   display: flex;
   justify-content: center;
 }
@@ -101,6 +100,7 @@ ol {
   display: grid;
   column-gap: 30px;
   align-items: end;
+  margin-top: 333px;
 }
 
 .result {
@@ -126,6 +126,7 @@ ol {
   justify-content: space-between;
   align-items: flex-start;
   max-height: 54px;
+  padding-top: 1px;
 }
 
 .search-form__fieldset {
