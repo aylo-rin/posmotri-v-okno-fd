@@ -20,6 +20,7 @@ html {
   background-color: #1b1919;
   display: flex;
   justify-content: center;
+  align-items: center;
 }
 
 h1,
@@ -96,13 +97,11 @@ ol {
 
 .content {
   width: 1140px;
-  max-height: 534px;
   display: grid;
   column-gap: 30px;
   align-items: end;
-  margin-top: 333px;
 }
-
+ 
 .result {
   grid-area: 1 / 1 / 2 / 2;
 }
@@ -146,12 +145,13 @@ ol {
   padding: 0 1px;
 }
 
-.search-form__label:hover {
+.search-form__checkbox-list .search-form__label:hover {
   cursor: pointer;
+  text-decoration: underline;
 }
 
 .search-form__label:has(:focus-visible) {
-  outline: 1px solid #fff;
+  outline: 1px solid currentColor;
 }
 
 .search-form__label:has(:active) {
@@ -161,7 +161,7 @@ ol {
 .search-form__textfield {
   width: 225px;
   height: 27px;
-  border: 1px solid #fff;
+  border: 1px solid currentColor;
   border-left: none;
   border-right: none;
   color: inherit;
@@ -179,8 +179,8 @@ ol {
 }
 
 .search-form__textfield:active {
-  border-left: 1px solid #fff;
-  border-right: 1px solid #fff;
+  border-left: 1px solid currentColor;
+  border-right: 1px solid currentColor;
   outline: none;
 }
 
@@ -199,10 +199,14 @@ ol {
   padding-right: 2px;
 }
 
+.search-form__checkbox {
+  appearance: none;
+}
+
 .search-form__pseudo-checkbox {
   width: 19px;
   height: 19px;
-  border: 1px solid #fff;
+  border: 1px solid currentColor;
   margin-right: 5px;
   background-color: transparent;
   display: flex;
@@ -214,7 +218,7 @@ ol {
   content: "";
   width: 15px;
   height: 15px;
-  background-color: #fff;
+  background-color: currentColor;
   display: none;
 }
 
@@ -234,7 +238,7 @@ ol {
 }
 
 .title {
-  font-family: Oswald;
+  font-family: Oswald, sans-serif;
   font-weight: 700;
   font-size: 75px;
   line-height: 94%;
@@ -251,6 +255,7 @@ ol {
   margin-top: 24px;
   padding-top: 2px;
   height: 298px;
+  width: 399px;
   overflow: auto;
   position: relative;
 }
@@ -277,19 +282,7 @@ ol {
 
 .content__card-link:hover {
   cursor: pointer;
-}
-
-/* Два селектора ховер с разным подчеркиванием для заголовка и текста */
-.content__card-link:hover .content__video-card-title {
   text-decoration: underline;
-  text-underline-offset: 4px;
-  text-decoration-thickness: 1px;
-}
-
-.content__card-link:hover .content__video-card-description {
-  text-decoration: underline;
-  text-underline-offset: 2px;
-  text-decoration-thickness: 1px;
 }
 
 .content__card-link:active {
